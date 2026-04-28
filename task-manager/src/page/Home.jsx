@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Liste from '../components/Liste'
 
-const API = 'http://localhost:3001'
+const API = 'https://task-manager-api-923o.onrender.com'
 
 function Home() {
   const [taches, setTaches] = useState([])
