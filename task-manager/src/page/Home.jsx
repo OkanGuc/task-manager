@@ -10,7 +10,8 @@ function Home() {
   useEffect(() => {
     fetch(`${API}/taches`)
       .then(res => res.json())
-      .then(data => setTaches(data))
+      .then(data => Array.isArray(data) && setTaches(data))
+      .catch(() => {})
   }, [])
 
   async function ajouterTache() {
